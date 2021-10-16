@@ -1,0 +1,26 @@
+.btn {
+  &--primary {
+    background-color: $primary-color;
+    color: $color-white;
+    border: 1px solid transparent;
+
+    &:hover {
+      @extend .btn--outline;
+    }
+  }
+
+  &--secondary {
+    background-color: $color-white;
+    color: $primary-color;
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+
+    .icon {
+      margin-inline-end: 13px;
+    }
+  }
+}

@@ -1,24 +1,777 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="assets/css/style-ltr.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="assets/css/style-ltr.min.css" />
     <title>SCS Home</title>
-</head>
-<body>
-
-
-    <!-- HEADER START -->
+  </head>
+  <body>
+    <!-- HEADER SECTION START -->
     <header class="header">
+      <nav class="header__nav header__nav--home">
         <div class="container">
-            <h1>header will be hear!!</h1>
+          <div class="row">
+            <div class="col-md-10 d-flex">
+              <a href="" class="header__nav__logo">
+                <img
+                  src="../assets/img/logo.png"
+                  alt="Logo"
+                  class="header__nav__logo-img"
+                />
+              </a>
+              <ul class="header__nav__items">
+                <li class="header__nav__item header__nav__item--active">
+                  <a href="#" class="header__nav__item__link">About</a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__item__link"
+                    >Projects Owners</a
+                  >
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__item__link"
+                    >Why Get Involved?
+                  </a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__item__link">Agenda </a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__item__link">Gallery </a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__item__link"
+                    >Sponsors & Partners
+                  </a>
+                </li>
+                <li class="header__nav__item">
+                  <a href="#" class="header__nav__item__link">Contact </a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-2 header__nav__access">
+              <button class="btn btn--primary">Login</button>
+            </div>
+          </div>
         </div>
+      </nav>
+
+      <div class="header__mobile-nav">
+        <div
+          class="
+            container
+            header__mobile-nav__container
+            d-flex
+            align-items-center
+            justify-content-between
+          "
+        >
+          <div class="d-flex align-items-center justify-content-between">
+            <a href="#" class="header__mobile-nav__burger-menu" id="openMenu">
+              <i class="icon icon-menu"></i>
+            </a>
+            <a href="#" class="header__mobile-nav__logo">
+              <img src="assets/img/logo.png" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <i
+              class="icon icon-search header__mobile-nav__search-button"
+              id="openSearchBtnWithMobile"
+            ></i>
+            <a
+              href="#"
+              class="header__mobile-nav__account"
+              type="button"
+              id="changeLang"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              ‏
+              <i class="icon icon-user"></i>
+            </a>
+            <div
+              class="dropdown-menu header__mobile-nav__account-dropdown"
+              aria-labelledby="changeLang"
+            >
+              <!-- <a class="btn utl-btn-primary" href="#">إنشاء حساب جديد</a> -->
+              <a class="btn utl-btn-primary" href="#">تسجيل الدخول</a>
+            </div>
+          </div>
+        </div>
+        <form
+          action="#"
+          id="searchMobile"
+          class="header__nav__search__form header__nav__search__form--active"
+        >
+          <input
+            type="text"
+            class="form-control header__nav__search__form__input"
+            placeholder="كلمة البحث"
+          />
+          <a
+            href="#"
+            class="header__nav__search__form__button"
+            id="openSearchBtn"
+          >
+            <i class="icon icon-search"></i>
+          </a>
+        </form>
+      </div>
+
+      <div class="header__mobile">
+        <nav class="nav-drill">
+          <a href="#" id="closeMenu">x</a>
+          <ul class="nav-items nav-level-1">
+            <li class="nav-item">
+              <a class="nav-link" href="#"> الرئيسية </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> من نحن </a>
+            </li>
+            <li class="nav-item nav-expand">
+              <a class="nav-link nav-expand-link" href="#"> المركز الإعلامي </a>
+              <ul class="nav-items nav-expand-content">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> برنامج رقم 1 </a>
+                </li>
+                <li class="nav-item nav-expand">
+                  <a class="nav-link nav-expand-link" href="#">
+                    برنامج رقم 1
+                  </a>
+                  <ul class="nav-items nav-expand-content">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"> برنامج فرعي رقم 1 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"> برنامج فرعي رقم 1 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"> برنامج فرعي رقم 1 </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-expand">
+              <a class="nav-link nav-expand-link" href="#"> مركز الوسائط </a>
+              <ul class="nav-items nav-expand-content">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> برنامج رقم 1 </a>
+                </li>
+                <li class="nav-item nav-expand">
+                  <a class="nav-link nav-expand-link" href="#">
+                    برنامج رقم 1
+                  </a>
+                  <ul class="nav-items nav-expand-content">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"> برنامج فرعي رقم 1 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"> برنامج فرعي رقم 1 </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"> برنامج فرعي رقم 1 </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> اتصل بنا </a>
+            </li>
+
+            <a
+              href="#"
+              class="header__mobile__change-lang utl-down-arrow mt-5 mx-3"
+              type="button"
+              id="changeLang"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              ‏ تغيير اللغة</a
+            >
+            <div class="dropdown-menu" aria-labelledby="changeLang">
+              <a class="dropdown-item" href="#">عربي</a>
+              <a class="dropdown-item" href="#">English</a>
+            </div>
+            <ul class="social-links mt-5 mx-3">
+              <li class="social-links__item">
+                <a href="#" class="social-links__item__link">
+                  <i class="icon icon-youtube"></i>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a href="#" class="social-links__item__link">
+                  <i class="icon icon-instagram"></i>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a href="#" class="social-links__item__link">
+                  <i class="icon icon-twitter"></i>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a href="#" class="social-links__item__link">
+                  <i class="icon icon-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__main">
+        <!-- <div class="header__main__bg"></div> -->
+        <div class="container header__main__container">
+          <div class="header__main__project">
+            <h1 class="heading-1">Future Projects Forum (FPF)</h1>
+            <div class="header__main__project__appointment">
+              <i
+                class="
+                  header__main__project__appointment__icon
+                  icon icon-calender
+                "
+              ></i>
+              <div>
+                <h3 class="header__main__project__appointment__date">
+                  Mar 22, 2022 – Mar 24, 2022
+                </h3>
+                <h5>From 10:00 To 14:10 - Saudi Arabia Time (GMT+3)</h5>
+              </div>
+            </div>
+            <button class="btn btn--primary">Register Now</button>
+          </div>
+        </div>
+      </div>
     </header>
-    <!-- HEADER END -->
-    
-</body>
+    <!-- HEADER SECTION END -->
+
+    <!-- ABOUT SECTION START -->
+    <section class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="about__info about__info--first">
+              <h2 class="heading-1">About FPF</h2>
+              <p class="heading-3">
+                The Kingdom has established its economic status globally in a
+                way that it plays a prominent role among the major countries,
+                leading it to become one of the most important members of the
+                G20 countries. In fact, Riyadh hosted the G20 Summit 2020; it is
+                the fifteenth meeting of the (G20). The Kingdom's economy
+                depends on a number of sectors that play an essential role in
+                GDP, such as the construction sector, which is the
+                second-largest non-oil sector. Moreover, it is one of the big
+                supporters in achieving the Kingdom's vision 2030. The
+                contracting market in the Kingdom is considered to be the
+                largest in the Middle East, where international reports
+                indicated that the volume of new projects in the sector exceeds
+                5,000 projects with a value of up to SR 6 trillion.
+              </p>
+              <p class="heading-3">
+                To allow contractors, suppliers, banks and others to familiarize
+                themselves with future projects and create new investment
+                opportunities, and following the great success of the Future
+                Projects Forum in its first edition, the Saudi Contractors
+                Authority is pleased to announce the "Digital Edition" of the
+                Future Projects Forum to be held during the period 22-24 March
+                2021.
+              </p>
+              <p class="heading-3">
+                The Future Projects Forum (FPF) is a unique platform that has
+                made it one of the largest platforms in the Middle East to
+                showcase future projects. The forum aims to bring together
+                project owners from government or private entities with
+                contractors and interested parties in one place and at one time
+                to create new opportunities by identifying details of future
+                projects in the contracting sector and knowing the mechanism of
+                qualification and competition.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about__info about__info--second">
+              <p class="heading-3">
+                The forum also aims to develop a network of relationships
+                between project owners, contractors and interested parties, as
+                well as to provide partnerships between contractors themselves.
+              </p>
+              <p class="heading-3">
+                After the Future Projects Forum 2019 and 2020 received a high
+                rate of satisfaction of participants reaching 91%, the number of
+                presenters in the third edition was raised to be over +37
+                bodies, ranging from governmental and private, to present their
+                projects with a total value of more than +600 billion Saudi
+                riyals and the participation of nearly +10,000 contractors and
+                interested.
+              </p>
+              <p class="heading-3">
+                Register quickly and be the first to know the details of these
+                projects and increase your chances of building relationships and
+                communication with project owners and senior contractors and
+                experts in the construction industry within three days that are
+                full of numbers of projects.
+              </p>
+              <p class="heading-3">
+                Don't miss the chance to take your business to new heights in a
+                serious unrivalled forum.
+              </p>
+              <a class="btn btn--secondary"> Register Now </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT SECTION END -->
+
+    <!-- STATISTICS SECTION START -->
+    <section class="statistics">
+      <div class="container statistics__container">
+        <div class="statistics__item">
+          <h2 class="statistics__item__label">1000</h2>
+          <p class="statistics__item__text">Number of registered entities</p>
+        </div>
+        <div class="statistics__item">
+          <h2 class="statistics__item__label">5000</h2>
+          <p class="statistics__item__text">Number of registered projects</p>
+        </div>
+        <div class="statistics__item">
+          <h2 class="statistics__item__label">2000</h2>
+          <p class="statistics__item__text">Projects estimated value</p>
+        </div>
+        <div class="statistics__item">
+          <h2 class="statistics__item__label">9000</h2>
+          <p class="statistics__item__text">Expected number attendees</p>
+        </div>
+      </div>
+    </section>
+    <!-- STATISTICS SECTION END -->
+
+    <!-- PROJECT OWNERS START -->
+    <section class="owners">
+      <div class="container">
+        <h2 class="heading-1 text-center">Projects Owners</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="owner-card">
+              <img
+                class="owner-card__image"
+                src="assets/img/owners/1.png"
+                alt="Owner 1"
+              />
+              <h2 class="owner-card__heading">More Information</h2>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <a href="" class="btn btn--outline">Show More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROJECT OWNERS END -->
+
+    <!-- FORUM SECTION START -->
+    <section class="forum">
+      <div class="container">
+        <h2 class="heading-1 text-center">Future Projects Forum in numbers</h2>
+        <div class="forum__table">
+          <table class="table utl-table">
+            <thead>
+              <th>Event Feature</th>
+              <th>2019</th>
+              <th>2020</th>
+              <th>2021 (Expected)</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Attendees</td>
+                <td>1000+</td>
+                <td>2000+</td>
+                <td>10,000</td>
+              </tr>
+              <tr>
+                <td>Governments and Private Entities</td>
+                <td>30+</td>
+                <td>35+</td>
+                <td>37+</td>
+              </tr>
+              <tr>
+                <td>Attendees</td>
+                <td>1000+</td>
+                <td>2000+</td>
+                <td>10,000</td>
+              </tr>
+              <tr>
+                <td>Attendees</td>
+                <td>1000+</td>
+                <td>2000+</td>
+                <td>10,000</td>
+              </tr>
+              <tr>
+                <td>Governments and Private Entities</td>
+                <td>30+</td>
+                <td>35+</td>
+                <td>37+</td>
+              </tr>
+              <tr>
+                <td>Attendees</td>
+                <td>1000+</td>
+                <td>2000+</td>
+                <td>10,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- FORUM SECTION END -->
+
+    <section class="involved">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="heading-1">Why Get Involved?</h2>
+            <p>
+              The Future Projects Forum (FPF) is a unique platform that has made
+              it one of the largest platforms in the Middle East to showcase
+              future projects.
+            </p>
+            <div>
+              <a href="" class="btn btn--secondary">Register Now</a>
+              <a href="">Book your stand</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="involved__cards">
+              <div class="involved__card">
+                <i class="involved__card__icon icon icon-camera"></i>
+                <p class="involved__card__text">
+                  A platform for project owners to show their projects and
+                  increase the number of contractors applying for their tenders.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
